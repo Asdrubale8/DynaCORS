@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <script>
+        async function retrievePublicResource() {
+            try {
+                res = await fetch('/publicResource', {method: 'GET'})
+                res = await res.text()
+                return res
+            } catch (err) {
+                return err
+            }
+        }
+
+        async function retrievePrivateResource() {
+            try {
+                res = await fetch('/privateResource', {method: 'GET'})
+                res = await res.text()
+                return res
+            } catch (err) {
+                return err
+            }
+        }
+
+        retrievePublicResource()
+            .then(res => document.getElementById("publicResource").innerHTML = res)
+            .catch(err => document.getElementById("publicResource").innerHTML = err)
+        
+        retrievePrivateResource()
+            .then(res => document.getElementById("privateResource").innerHTML = res)
+            .catch(err => document.getElementById("privateResource").innerHTML = err)
+        
+    </script>
+    <body>
+        <h1>Home</h1>
+        Public Resource: <span id="publicResource"></span>
+        <br>
+        <br>
+        Private Resource: <span id="privateResource"></span>
+    </body>
+</html>

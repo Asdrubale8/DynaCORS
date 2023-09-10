@@ -1,0 +1,29 @@
+{
+  "name": "dynacors",
+  "version": "1.0.0",
+  "description": "Dynamic CORS header generator based on host's authentication",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Asdrubale8/DynaCORS.git"
+  },
+  "keywords": [
+    "CORS",
+    "NodeJs"
+  ],
+  "author": "Gabriele Di Lieto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Asdrubale8/DynaCORS/issues"
+  },
+  "homepage": "https://github.com/Asdrubale8/DynaCORS#readme",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "express": "^4.18.2",
+    "sha1": "^1.1.1"
+  }
+}
